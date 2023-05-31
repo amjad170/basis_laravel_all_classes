@@ -1,0 +1,70 @@
+1 composer install/update
+2 .env create and db connection
+3 php artisan key:generate
+4 php artisan migrate
+5 php artisan db:seed
+6 php artisan serve
+
+
+1 composer create-project laravel/laravel:^8.0 wdpf51_laravel_pr2
+2 php artisan -V
+3 php artisan make:model Product -mcr
+4 php artisan migrate
+5 php artisan migrate:refresh
+6 php artisan make:seeder productSeeder
+7 php artisan db:seed
+8 php artisan make:factory productFactory --model=product
+9 php artisan migrate:fresh --seed
+10 php artisan route:list
+11 php artisan migrate:reset
+12 php artisan vendor:publish --tag=laravel-pagination
+
+13 php artisan make:controller backend/UserController -r
+
+#####MIddleware####
+1 php artisan make:middleware CheckAge
+2 php artisan make:controller showAge
+
+##########Authintication###
+1 composer create-project  laravel/laravel wdpf51_laravel8_jetstream_auth
+2 cd wdpf51_laravel8_jetstream_auth
+3 composer require laravel/jetstream
+4 php artisan jetstream:install livewire
+5 npm install
+6 npm run dev
+7 .env Database configuration
+8 php artisan migrate
+9 
+
+######## laravel voyager######
+1 composer create-project laravel/laravel laravel8_voyager
+2 cd laravel8_voyger
+3 composer require tcg/voyager
+4 env configure
+5 php artisan voyager:install
+6 php artisan serve
+7 php artisan migrate:reset
+
+
+Laravel 8 User Roles and Permissions Tutorial
+
+1 composer create-project --prefer-dist laravel/laravel wdpf51_laravel8_AAP
+2 cd wdpf51_laravel8_AAP
+3 env configuretion with database
+4 composer require spatie/laravel-permission
+5 composer require laravelcollective/html
+6 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+7 php artisan migrate
+8 php artisan make:model Product -cr
+9 composer require laravel/ui
+10 php artisan ui bootstrap --auth
+11 npm install
+12 npm run dev
+13 php artisan make:controller UserController -r
+14 php artisan make:controller RoleController
+15 app.blade.php
+16 php artisan make:seeder PermissionTableSeeder
+17 php artisan db:seed --class=PermissionTableSeeder
+18 php artisan db:seed --class=CreateAdminUserSeeder
+19 npx mix
+20 php artisan migrate:refresh
