@@ -1,0 +1,11 @@
+// laravel commands
+
+php -v
+node -v
+composer
+mv first_file second_file //command line
+composer create-project laravel/laravel example-app
+cd example-app
+php artisan serve
+php artisan down
+php artisan up
