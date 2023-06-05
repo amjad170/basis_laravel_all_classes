@@ -9,3 +9,11 @@ cd example-app
 php artisan serve
 php artisan down
 php artisan up
+php artisan make:controller Backend/BackendController
+php artisan make:migration create_products
+php artisan migrate
+php artisan migrate:refresh  
+php artisan migrate:rollback 
+php artisan migrate:rollback --step=1 --path=database/migrations/2023_06_04_165656_create_products.php 
+php artisan make:model Product   
+php artisan make:model Product -m 
