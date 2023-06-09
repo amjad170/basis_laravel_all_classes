@@ -35,6 +35,9 @@ Route::controller(ProductsController::class)->group(function(){
     Route::get('/add-product','addproduct')->name('product.add');
     Route::post('/productAdd','productAdd')->name('productAdd');
     Route::get('/manage-product','manageP')->name('manageProduct');
+    Route::get('/deleteProduct/{id}','destroy')->name('product.delete');
+    Route::get('/productEdit/{id}','edit')->name('product.edit');
+    Route::post('/updateProduct/{id}','update')->name('product.update');
 
 });
 

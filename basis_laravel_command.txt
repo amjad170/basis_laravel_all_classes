@@ -17,3 +17,5 @@ php artisan migrate:rollback
 php artisan migrate:rollback --step=1 --path=database/migrations/2023_06_04_165656_create_products.php 
 php artisan make:model Product   
 php artisan make:model Product -m 
+php artisan optimize 
+php artisan route:list

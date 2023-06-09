@@ -13,6 +13,7 @@
                                 <i class="fas fa-table me-1"></i>
                                 All Products
                             </div>
+
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
@@ -52,8 +53,8 @@
                                             <td>{{$productItem->p_qty}}</td>
                                             <td>{{$productItem->p_price}}</td>
                                             <td>
-                                                <a href="" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-                                                <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>  
+                                                <a href="{{Route('product.edit',$productItem->id)}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                                                <a href="{{Route('product.delete',$productItem->id)}}" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>  
                                             </td>
                                         </tr>
 
