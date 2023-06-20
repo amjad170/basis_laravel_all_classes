@@ -45,6 +45,11 @@ Route::controller(ProductController::class,)->group(function(){
     Route::post('/product/add','store')->name('product.add');
     Route::get('/product/manage','show')->name('product.manage');
     Route::get('/product/atoi/{id}','atoi')->name('product.atoi');
+    Route::get('/product/itoa/{id}','itoa')->name('product.itoa');
+    Route::get('/product/delete/{id}','destroy')->name('product.delete');
+    Route::get('/product/edit/{id}','edit')->name('product.edit');
+    Route::post('/product/update/{id}','update')->name('product.update');
+    Route::get('/singleProduct/{id}','singleProduct')->name('singleProduct');
 });
 
 

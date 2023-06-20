@@ -13,7 +13,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{Route('home')}}">Home</a></li>
                     <li><a href="{{Route('shop')}}">Shop page</a></li>
-                    <li><a href="{{Route('single')}}">Single product</a></li>
+                    {{-- <li><a href="{{Route('single')}}">Single product</a></li> --}}
                     <li><a href="{{Route('cart')}}">Cart</a></li>
                     <li><a href="{{Route('checkout')}}">Checkout</a></li>
                     <li><a href="#">Category</a></li>

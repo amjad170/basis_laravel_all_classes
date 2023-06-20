@@ -19,3 +19,7 @@ php artisan make:model Product
 php artisan make:model Product -m 
 php artisan optimize 
 php artisan route:list
+php artisan config:cache // for run project into other pc
+php artisan make:seeder UserSeeder
+php artisan migrate:fresh --seed
+php artisan r:l

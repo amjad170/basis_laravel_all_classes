@@ -18,6 +18,7 @@ return new class extends Migration
             $table->float('current_price');
             $table->float('prev_price');
             $table->boolean('status')->default(1);
+            $table->string('product_description');
             $table->timestamps();
         });
     }

@@ -38,6 +38,11 @@
                         </div>
 
                         <div class="form-group mb-3">
+                            <label for="p_description">product Description</label><br>
+                            <textarea wrap="hard" id="p_description" rows="4" cols="50" name="p_description" class="form-control">Write here Product Details</textarea>
+                        </div>
+
+                        <div class="form-group mb-3">
                             <input type="submit" class="btn btn-primary w-100" value="Add Product">
                         </div>
 

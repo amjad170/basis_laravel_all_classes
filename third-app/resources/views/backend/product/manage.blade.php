@@ -42,7 +42,7 @@
                         <tbody>
                             @php
 
-                               $i=1;
+                               $index=1;
 
                             @endphp
 
@@ -52,7 +52,7 @@
                                 @foreach($product as $productItem)
 
                                 <tr>
-                                    <td>{{$i++}}</td>
+                                    <td>{{$index++}}</td>
                                     <td>{{$productItem->product_name}}</td>
                                     <td>
                                         <img src="{{asset('uploads/product/'.$productItem->product_image)}}" alt="" height="80px" width="80px">
@@ -61,20 +61,30 @@
                                     <td>{{$productItem->prev_price}}</td>
                                     <td>
                                         @if($productItem->status==1)
-                                            <a href="{{Route('product.atoi',$productItem->id)}}" class="btn btn-success btn-sm">Active</a>
+                                            <a href="{{Route('product.atoi',$productItem->id)}}" class="btn btn-success btn-sm">
+                                                
+                                                <i class="fa-solid fa-user-check"></i>
+                                               
+                                            </a>
 
-                                            @else
-                                            <a href="{{Route('product.atoi',$productItem->id)}}" class="btn btn-danger btn-sm">Inactive</a>
+                                        @else 
+                                           <a href="{{Route('product.itoa',$productItem->id)}}" class="btn btn-danger btn-sm">
+
+                                            <i class="fa-solid fa-user-xmark"></i>
+                                           
+                                        </a>
 
                                         @endif
                                     </td>
                                     <td> 
-                                        <a href="" class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-                                        <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
+                                        <a href="{{Route('product.edit',$productItem->id)}}" class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                                        <a href="{{Route('product.delete',$productItem->id)}}" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
                                     </td>
+
                                 </tr>
 
                                 @endforeach
+
 
                             @endif
 

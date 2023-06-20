@@ -96,14 +96,14 @@
 
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="{{asset('uploads/product/'.$product->product_image)}}" alt="" height="320px" width="160px">
+                                    <img src="{{asset('uploads/product/'.$product->product_image)}}" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="{{Route('singleProduct',$product->id)}}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
                                 
-                                <h2><a href="single-product.html">{{$product->product_name}}</a></h2>
+                                <h2><a href="{{Route('singleProduct',$product->id)}}">{{$product->product_name}}</a></h2>
                                 
                                 <div class="product-carousel-price">
                                     <ins>${{$product->current_price}}</ins> <del>${{$product->prev_price}}</del>

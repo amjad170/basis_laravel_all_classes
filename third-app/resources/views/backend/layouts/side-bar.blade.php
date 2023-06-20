@@ -36,7 +36,9 @@
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
-            Start Bootstrap
+            Start Bootstrap &nbsp;&nbsp;&nbsp;
+            <a href="{{Route('admin.logout')}}"><i class="fa-solid fa-power-off"></i></a>
         </div>
+        
     </nav>
 </div>
